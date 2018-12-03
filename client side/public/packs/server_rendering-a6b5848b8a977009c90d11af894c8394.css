@@ -1,0 +1,184 @@
+.sequencer-container {
+  background-color: orange;
+  border-radius: 2vh;
+  position: relative;
+  -webkit-box-shadow: 0.5vh 0.5vh 10px rgba(46, 46, 46, .5);
+          box-shadow: 0.5vh 0.5vh 10px rgba(46, 46, 46, .5);
+}
+
+.sequencer-header {
+  height: 10%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2.5vh
+}
+
+.header-element {
+  display: inline;
+  padding-left: 1vh;
+  padding-right: 1vh;
+}
+
+.header-element.instrument {
+  height: 80%;
+}
+
+.header-element.sec {
+  padding-left: 0;
+}
+
+.header-element.left {
+  float: left;
+}
+
+.header-element.right {
+  margin-left: auto;
+  font-size: 200%;
+}
+
+.sequencer {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  height: 85%;
+}
+
+.grid-container {
+  float: left;
+  position: relative;
+  overflow: scroll;
+}
+
+.grid {
+  float: left;
+  display: table;
+  table-layout: fixed;
+  border-spacing: 0;
+}
+
+.grid-row {
+  display: table-row;
+}
+
+.grid-item {
+  display: table-cell;
+}
+
+.back-cell {
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: rgb(83, 106, 122);
+}
+
+.preview-note {
+  position: absolute;
+  background-color: dodgerblue;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid black;
+  opacity: 0.4;
+}
+
+.notes {
+  display: inline;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.note {
+  position: absolute;
+  background-color: dodgerblue;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid black;
+  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+          box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+  -webkit-transition: background-color 0.5s, -webkit-box-shadow 0.5s;
+  transition: background-color 0.5s, -webkit-box-shadow 0.5s;
+  transition: box-shadow 0.5s, background-color 0.5s;
+  transition: box-shadow 0.5s, background-color 0.5s, -webkit-box-shadow 0.5s
+}
+
+.note-selected {
+  border: 2px solid white;
+}
+
+.note:hover {
+  background-color: rgb(110, 164, 255);
+  -webkit-box-shadow: 4px 4px 5px rgba(0, 0, 0, .5);
+          box-shadow: 4px 4px 5px rgba(0, 0, 0, .5);
+  -webkit-transition: background-color 0.5s, -webkit-box-shadow 0.5s;
+  transition: background-color 0.5s, -webkit-box-shadow 0.5s;
+  transition: box-shadow 0.5s, background-color 0.5s;
+  transition: box-shadow 0.5s, background-color 0.5s, -webkit-box-shadow 0.5s
+}
+
+.note-right {
+  position: absolute;
+  left: 85%;
+  width: 15%;
+  height: 100%;
+  cursor: col-resize;
+}
+
+.keyboard-container {
+  float: left;
+  overflow-y: hidden;
+}
+
+.key-container {
+  position: relative;
+  width: 100%;
+}
+
+.key {
+  position: absolute;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid black;
+  text-align: right;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.w-key {
+  width: 100%;
+  background-color: white;
+  z-index: 1;
+}
+
+.w-key.pressed {
+  background-color: lightgray;
+}
+
+.b-key {
+  width: 50%;
+  background-color: black;
+  z-index: 2;
+  color: white;
+}
+
+.b-key.pressed {
+  background-color: dimgray;
+}
+
+.caret {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+/*# sourceMappingURL=server_rendering-a6b5848b8a977009c90d11af894c8394.css.map*/

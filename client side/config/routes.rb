@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   devise_for  :users,
               path: ''
 
+  resources :reacts
   authenticated :user do
     root to: redirect('/dashboard'), as: :authenticated_root
   end

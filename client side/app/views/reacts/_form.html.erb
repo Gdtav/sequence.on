@@ -1,0 +1,17 @@
+<%= form_with(model: react, local: true) do |form| %>
+  <% if react.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(react.errors.count, "error") %> prohibited this react from being saved:</h2>
+
+      <ul>
+      <% react.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
